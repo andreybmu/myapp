@@ -1,13 +1,13 @@
-Установка на двух vm
+РЈСЃС‚Р°РЅРѕРІРєР° РЅР° РґРІСѓС… vm
 centos-01
 centos-02
 
 
-Установка OpenJDK:
+РЈСЃС‚Р°РЅРѕРІРєР° OpenJDK:
 
 yum install java-1.8.0-openjdk.x86_64
 
-Проверка:
+РџСЂРѕРІРµСЂРєР°:
 
 java -version
 
