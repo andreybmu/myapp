@@ -1,0 +1,30 @@
+Установка на vm
+centos-01
+
+
+Установка Node с помощью Node Version Manager (NVM)
+
+Страница проекта на GitHub - https://github.com/creationix/nvm
+
+команда curl из файла README
+
+
+Проверка скрипта
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh
+
+Запуск скрипта
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+
+Вывод версий
+nvm list-remote
+
+Установка
+nvm install v8.1.3
+
+Просмотреть установленные версии
+
+nvm list
+
+Или
+node --version
+

@@ -1,0 +1,25 @@
+Настройка конфига
+
+/etc/nginx/nginx.conf
+/etc/nginx/conf.d/default.conf
+
+
+Настройка SELinux
+setsebool httpd_can_network_connect on
+
+
+Запуск сервиса
+
+systemctl start nginx.service
+
+
+Проверка
+
+http://xxx.xxx.xxx.103
+
+
+Добавление в автозапуск
+
+systemctl enable nginx.service
+
+

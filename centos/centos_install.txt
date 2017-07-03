@@ -1,0 +1,25 @@
+Создание трех виртуальных машин в Oracle VM VirtualBox
+
+Дистрибутив - CentOS-7-x86_64-minimal-1511.iso
+
+
+Настройка после установки
+
+Обновить систему:
+yum -y update
+
+Установить Midhight Commander:
+yum -y install mc
+
+Установить сетевые утилиты
+yum install net-tools
+
+
+Настроить SELinux
+
+/etc/sysconfig/selinux
+меняем значение
+SELINUX=permissive
+
+Временное отключение SELinux
+setenforce 0

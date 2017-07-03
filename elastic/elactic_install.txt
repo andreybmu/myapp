@@ -1,0 +1,45 @@
+Установка на двух vm
+centos-01
+centos-02
+
+
+Установка OpenJDK:
+
+yum install java-1.8.0-openjdk.x86_64
+
+Проверка:
+
+java -version
+
+
+
+Install Public Signing Key:
+
+rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+
+
+Create new repo in your /etc/yum.repos.d/ directory:
+
+/etc/yum.repos.d/elasticsearch.repo
+
+[elasticsearch-5.x]
+name=Elasticsearch repository for 5.x packages
+baseurl=https://artifacts.elastic.co/packages/5.x/yum
+gpgcheck=1
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+enabled=1
+autorefresh=1
+type=rpm-md
+
+
+Install Elasticsearch:
+
+yum install elasticsearch
+
+
+
+
+
+
+
+

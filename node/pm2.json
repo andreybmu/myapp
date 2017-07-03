@@ -1,0 +1,59 @@
+{
+  "apps": [
+    {
+      "exec_mode": "fork_mode",
+      "script": "status.js",
+      "name": "status-0",
+      "node_args": [ "--harmony" ],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "error_file": "./logs/status-0.err.log",
+      "out_file": "./logs/status-0.out.log"
+    },
+    {
+      "exec_mode": "fork_mode",
+      "script": "status.js",
+      "name": "status-1",
+      "node_args": [ "--harmony" ],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "error_file": "./logs/status-1.err.log",
+      "out_file": "./logs/status-1.out.log"
+    },
+    {
+      "exec_mode": "fork_mode",
+      "script": "status.js",
+      "name": "status-2",
+      "node_args": [ "--harmony" ],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "error_file": "./logs/status-2.err.log",
+      "out_file": "./logs/status-2.out.log"
+    },
+    {
+      "exec_mode": "fork_mode",
+      "script": "status.js",
+      "name": "status-3",
+      "node_args": [ "--harmony" ],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "error_file": "./logs/status-3.err.log",
+      "out_file": "./logs/status-3.out.log"
+    },
+    {
+      "exec_mode": "fork_mode",
+      "script": "status.js",
+      "name": "status-4",
+      "node_args": [ "--harmony" ],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "error_file": "./logs/status-4.err.log",
+      "out_file": "./logs/status-4.out.log"
+    },
+  ]
+}

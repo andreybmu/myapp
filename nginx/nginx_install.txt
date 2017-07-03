@@ -1,0 +1,17 @@
+Установка на vm
+centos-03
+
+Создание репозитория
+
+nginx.repo
+
+[nginx]
+name=nginx repo
+baseurl=http://nginx.org/packages/centos/7/$basearch/
+gpgcheck=0
+enabled=1
+
+
+Установка Nginx
+
+yum install nginx

@@ -1,0 +1,24 @@
+Настройка конфига
+
+/etc/elasticsearch/elasticsearch.yml
+
+
+Запуск на первой и второй ноде
+
+systemctl start elasticsearch.service
+
+
+Проверка
+
+curl -XGET 'http://xxx.xxx.xxx.101:9200/_cluster/state?pretty'
+curl -XGET 'http://xxx.xxx.xxx.102:9200/_cluster/state?pretty'
+
+
+Добавить в автозапуск
+
+systemctl enable elasticsearch.service
+
+
+
+
+

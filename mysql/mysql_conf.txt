@@ -1,0 +1,64 @@
+
+Start the Percona XtraDB Cluster server:
+
+service mysql start
+
+
+Copy the automatically generated temporary password for the superuser account:
+
+grep 'temporary password' /var/log/mysqld.log
+
+
+Use this password to log in as root:
+
+mysql -u root -p
+
+
+Change the password for the superuser account and log out. For example:
+
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'rootPass';
+
+mysql> exit
+
+
+Stop the mysql service:
+
+service mysql stop
+
+
+Настройка конфига
+
+файл /etc/my.cnf
+
+
+
+Первый запуск на первой ноде
+(Последующий запуск как обычно)
+
+systemctl start mysql@bootstrap.service
+
+
+Создание пользователя с привилегиями для SST операций
+
+mysql> create user 'sstuser'@'localhost' IDENTIFIED BY 'passw0rd';
+mysql> grant reload, lock tables, replication client on *.* to 'sstuser'@'localhost';
+mysql> flush privileges;
+
+
+Запуск на второй ноде
+
+systemctl start mysql.service
+
+
+
+Проверка
+
+mysql -u root -p -e "show status like 'wsrep%';" | grep -E 'local_state|cluster|ready|connected'
+
+
+
+
+Добавить в автозапуск
+
+systemctl enable mysql.service
+

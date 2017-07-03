@@ -1,0 +1,38 @@
+
+Paste the hosts configuration below:
+
+xxx.xxx.xxx.101 centos-01
+xxx.xxx.xxx.102 centos-02
+xxx.xxx.xxx.103 centos-03
+
+Установка на двух vm
+centos-01
+centos-02
+
+
+Install epel-repository and socat:
+
+yum -y install epel-release
+yum -y install socat
+
+
+
+Remove the mariadb-libs to avoid the package conflict between mariadb-libs and Percona XtraDB Cluster:
+
+yum -y remove mariadb-libs
+
+
+
+
+Install the Percona repository package:
+
+yum install http://www.percona.com/downloads/percona-release/redhat/0.1-4/percona-release-0.1-4.noarch.rpm
+
+
+
+
+Install the Percona XtraDB Cluster packages:
+
+yum install Percona-XtraDB-Cluster-57
+
+
