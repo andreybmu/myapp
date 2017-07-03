@@ -1,30 +1,30 @@
-Установка на vm
+РЈСЃС‚Р°РЅРѕРІРєР° РЅР° vm
 centos-01
 
 
-Установка Node с помощью Node Version Manager (NVM)
+РЈСЃС‚Р°РЅРѕРІРєР° Node СЃ РїРѕРјРѕС‰СЊСЋ Node Version Manager (NVM)
 
-Страница проекта на GitHub - https://github.com/creationix/nvm
+РЎС‚СЂР°РЅРёС†Р° РїСЂРѕРµРєС‚Р° РЅР° GitHub - https://github.com/creationix/nvm
 
-команда curl из файла README
+РєРѕРјР°РЅРґР° curl РёР· С„Р°Р№Р»Р° README
 
 
-Проверка скрипта
+ГЏГ°Г®ГўГҐГ°ГЄГ  Г±ГЄГ°ГЁГЇГІГ 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh
 
-Запуск скрипта
+Г‡Г ГЇГіГ±ГЄ Г±ГЄГ°ГЁГЇГІГ 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 
-Вывод версий
+Г‚Г»ГўГ®Г¤ ГўГҐГ°Г±ГЁГ©
 nvm list-remote
 
-Установка
+Г“Г±ГІГ Г­Г®ГўГЄГ 
 nvm install v8.1.3
 
-Просмотреть установленные версии
+ГЏГ°Г®Г±Г¬Г®ГІГ°ГҐГІГј ГіГ±ГІГ Г­Г®ГўГ«ГҐГ­Г­Г»ГҐ ГўГҐГ°Г±ГЁГЁ
 
 nvm list
 
-Или
+Г€Г«ГЁ
 node --version
 
