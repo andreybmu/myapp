@@ -9,7 +9,7 @@ centos-01
 команда curl из файла README
 
 
-Ïðîâåðêà ñêðèïòà
+Проверка скрипта
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh
 
 Çàïóñê ñêðèïòà
