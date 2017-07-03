@@ -26,39 +26,35 @@ Stop the mysql service:
 service mysql stop
 
 
-Настройка конфига
-
-файл /etc/my.cnf
-
+РќР°СЃС‚СЂРѕР№РєР° РєРѕРЅС„РёРіР°
+/etc/my.cnf
 
 
-Первый запуск на первой ноде
-(Последующий запуск как обычно)
+РџРµСЂРІС‹Р№ Р·Р°РїСѓСЃРє РЅР° РїРµСЂРІРѕР№ РЅРѕРґРµ
+(РџРѕСЃР»РµРґСѓСЋС‰РёР№ Р·Р°РїСѓСЃРє РєР°Рє РѕР±С‹С‡РЅРѕ)
 
 systemctl start mysql@bootstrap.service
 
 
-Создание пользователя с привилегиями для SST операций
+РЎРѕР·РґР°РЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ СЃ РїСЂРёРІРёР»РµРіРёСЏРјРё РґР»СЏ SST РѕРїРµСЂР°С†РёР№
 
 mysql> create user 'sstuser'@'localhost' IDENTIFIED BY 'passw0rd';
 mysql> grant reload, lock tables, replication client on *.* to 'sstuser'@'localhost';
 mysql> flush privileges;
 
 
-Запуск на второй ноде
+Р—Р°РїСѓСЃРє РЅР° РІС‚РѕСЂРѕР№ РЅРѕРґРµ
 
 systemctl start mysql.service
 
 
 
-Проверка
+РџСЂРѕРІРµСЂРєР°
 
 mysql -u root -p -e "show status like 'wsrep%';" | grep -E 'local_state|cluster|ready|connected'
 
 
-
-
-Добавить в автозапуск
+Р”РѕР±Р°РІРёС‚СЊ РІ Р°РІС‚РѕР·Р°РїСѓСЃРє
 
 systemctl enable mysql.service
 
