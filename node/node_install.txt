@@ -12,19 +12,19 @@ centos-01
 Проверка скрипта
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh
 
-Çàïóñê ñêðèïòà
+Запуск скрипта
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 
-Âûâîä âåðñèé
+Вывод версий
 nvm list-remote
 
-Óñòàíîâêà
+Установка
 nvm install v8.1.3
 
-Ïðîñìîòðåòü óñòàíîâëåííûå âåðñèè
+Просмотреть установленные версии
 
 nvm list
 
-Èëè
+Или
 node --version
 
