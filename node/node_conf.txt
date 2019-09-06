@@ -1,14 +1,11 @@
-Создание каталога
 
 /myapp
 
-Копирование в каталог файлов
 package.json
 status.js
 
 
 
-Создание переменных
 
 PORT=3000
 MYSQL=mysql://sql_user:passw0rd@xxx.xxx.xxx.101/mysql
@@ -19,34 +16,26 @@ export MYSQL
 export ELASTIC
 
 
-Просмотр переменных
 env
 printenv
 
 
-Запуск сервиса
 npm start
 
-Остановка сервиса
 npm stop
 
 
-Установка pm2
 npm install pm2 -g
 
-Создание скрипта для запуска сервиса node.js в 5-и экземплярах
 \myapp\pm2.json
 
 
-Запус сервиса
 pm2 start pm2.json
 
 
-Остановка сервиса
 pm2 start pm2.json
 
 
 
-Проверка работы сервиса
 http://xxx.xxx.xxx.101:3000/
 
