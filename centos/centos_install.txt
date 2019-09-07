@@ -1,4 +1,4 @@
-Создание трех виртуальных машин в Oracle VM VirtualBox
+здание трех виртуальных машин в Oracle VM VirtualBox
 
 Дистрибутив - CentOS-7-x86_64-minimal-1511.iso
 
